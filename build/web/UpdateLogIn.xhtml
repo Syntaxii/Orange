@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>LogIn Update</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="FinalStyle.css" />
+    </head>
+    <body>
+        <div>
+      <h1 class="logo">
+        Welcome to Talented!
+      </h1>
+      <div class="tab">
+        <form method="get" action="defaultHub.xhtml">
+          <button class="submit">Hub</button>
+        </form>
+        <form method="get" action="Portfolio.xhtml">
+          <button class="submit">Portfolio</button>
+        </form>
+        <form method="get" action="JobBoard.xhtml">
+          <button class="submit">Job Board</button>
+        </form>
+          <form method="get" action="JobsInput.xhtml">
+          <button class="submit">Post a Job</button>
+        </form>
+        <form method="get" action="landingpage.xhtml">
+          <button class="submit">Log Out</button>
+        </form>
+      </div>
+    </div>
+    <hr />
+    <br />
+    
+    <section>
+        <article>
+    <div>
+      <p></p>
+      <h2>
+        Enter your information below:
+      </h2>
+      <h:form>
+          <h:outputLabel value="User Name:"/>
+          <h:inputText id ="userID" value ="#{logInUpdateBean.userName}">
+          </h:inputText>
+           <br />
+          <h:outputLabel value="Old Password:"/>
+          <h:inputText id ="password" value ="#{logInUpdateBean.password}">
+          </h:inputText>
+          <br/>
+           <h:outputLabel value="New Password:"/>
+          <h:inputText id ="newpassword" value ="#{logInUpdateBean.newPassword}">
+          </h:inputText>
+          <h:commandButton value="Update Password"/>
+          <h:outputText value="#{logInUpdateBean.getResponse()}"/>
+            <br/>
+      </h:form>
+    </div>
+    </article>
+    </section>
+    
+    <br />
+    <hr />
+    <p>
+      Design uses <a href="http://concisecss.com/">Concise CSS Framework</a>
+    </p>
+    <p>
+      Designed by Team Orange
+    </p>
+    </body>
+</html>

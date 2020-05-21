@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Jobs Input</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="FinalStyle.css" />
+    </head>
+    <body>
+        <div>
+      <h1 class="logo">
+        Welcome to Talented!
+      </h1>
+      <div class="tab">
+        <form method="get" action="defaultHub.xhtml">
+          <button class="submit">Hub</button>
+        </form>
+        <form method="get" action="Portfolio.xhtml">
+          <button class="submit">Portfolio</button>
+        </form>
+        <form method="get" action="JobBoard.xhtml">
+          <button class="submit">Job Board</button>
+        </form>
+          <form method="get" action="JobsInput.xhtml">
+          <button class="submit">Post a Job</button>
+        </form>
+        <form method="get" action="landingpage.xhtml">
+          <button class="submit">Log Out</button>
+        </form>
+      </div>
+    </div>
+    <hr />
+    <br />
+    
+    <section>
+        <article>
+    <div> 
+      <p>
+          <h:body>
+        <h:form>
+            <h1>Job Input Form</h1>
+            <table border="0">
+                <tr>
+                    <td><h:outputLabel value="User Name: "/></td>
+                    <td><h:inputText id ="userName" value ="#{jobsInputBean.userName}" required = "true" /></td>
+                    <td><h:message for="userName" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="Password: "/></td>
+                    <td><h:inputText id ="password" value ="#{jobsInputBean.password}" required = "true"/></td>
+                    <td><h:message for="password" style="color:red" /></td>
+                </tr>
+            </table>
+            <h:outputLabel value="Pay (only numbers accepted): "/>
+            <h:inputText id ="pay" value ="#{jobsInputBean.pay}" onkeypress="if(event.which &lt; 48 || event.which &gt; 57) return false;" required = "true"/>
+            <h:message for="pay" style="color:red" />
+            <br/>
+            <table border="0">
+                <tr>
+                    <td><h:outputLabel value="Location: "/></td>
+                    <td><h:inputText id ="location" value ="#{jobsInputBean.location}" required = "true"/></td>
+                    <td><h:message for="location" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="Title: "/></td>
+                    <td><h:inputText id ="title" value ="#{jobsInputBean.title}" required = "true"/></td>
+                    <td><h:message for="title" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="role: "/></td>
+                    <td><h:inputText id ="role" value ="#{jobsInputBean.role}" required = "true"/></td>
+                    <td><h:message for="role" style="color:red" /></td>
+                </tr>
+            </table>
+            <h:outputLabel value="Desciption of Job: "/>
+            <h:inputText id ="description" value ="#{jobsInputBean.JDescription}" required = "true"/>
+            <h:message for="description" style="color:red" />
+            <br/>
+            <table border="0">
+                <tr>
+                    <td><h:outputLabel value="Starting Date (YYYY-MM-DD): "/></td>
+                    <td><h:inputText id ="sDate" value ="#{jobsInputBean.startingDate}" required = "true"/></td>
+                    <td><h:message for="sDate" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="Ending Date (YYYY-MM-DD): "/></td>
+                    <td><h:inputText id ="eDate" value ="#{jobsInputBean.endingDate}" required = "true"/></td>
+                    <td><h:message for="eDate" style="color:red" /></td>
+                </tr>
+            </table>
+            <h:commandButton value="Make Job" action="#{jobsInputBean.doStuff()}"/>
+            <br/>
+            <h:outputText  id="string2" value="#{jobsInputBean.string2}"/>
+        </h:form>
+    </h:body>
+      </p>
+    </div>
+    </article>
+    </section>
+    
+    
+    <div>
+    </div>
+    <br />
+    <hr />
+    <p>
+      Design uses <a href="http://concisecss.com/">Concise CSS Framework</a>
+    </p>
+    <p>
+      Designed by Team Orange
+    </p>
+    </body>
+</html>

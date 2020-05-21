@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Register</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="FinalStyle.css" />
+    </head>
+    <body>
+        <div>
+      <h1 class="logo">
+        Welcome to Talented!
+      </h1>
+      <div class="tab">
+        <form method="get" action="Register.xhtml">
+          <button type="submit">Register</button>
+        </form>
+        <form method="get" action="LogIn.xhtml">
+          <button type="submit">Log In</button>
+        </form>
+        <form method="get" action="OrangeAboutUs.xhtml">
+          <button type="submit">About Us</button>
+        </form>
+      </div>
+    </div>
+    <hr />
+    <br />
+    
+    <section>
+        <article>
+    <div>
+      <p></p>
+      <h2>
+        Enter your information below:
+      </h2>
+      <br />
+      <h:form>
+            <table border="0">
+                <tr>
+                    <td><h:outputLabel value="legal First Name: "/></td>
+                    <td><h:inputText label = "Legal First Name" id ="legalfirstname" value="#{registerBean.legalFirstName}" required = "true" /></td>
+                    <td><h:message for="legalfirstname" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="legal Last Name: "/></td>
+                    <td><h:inputText label = "Legal Last Name" id ="legallastname" value="#{registerBean.legalLastName}" required = "true"/></td>
+                    <td><h:message for="legallastname" style="color:red" /></td>
+                </tr>
+            </table>
+            <table border="0">
+                <tr>
+                    <td><h:outputLabel  value="Are you a Performer: "/></td>
+                    <td><h:message for="isperformer" style="color:red" /></td>
+                </tr>
+            </table>
+                <h:selectOneRadio label = "Performer" id ="isperformer" value="#{registerBean.isPerformer}" required = "true">
+                    <f:selectItem itemValue = "yes" itemLabel = "yes" /> 
+                    <f:selectItem itemValue = "no" itemLabel = "no" /> 
+                </h:selectOneRadio>
+                
+            <table border="0">
+                <tr>
+                    <td><h:outputLabel value="User Name: "/></td>
+                    <td><h:inputText  label = "User Name" id ="username" value="#{registerBean.userName}" required = "true"/></td>
+                    <td><h:message for="username" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="Password: "/></td>
+                    <td><h:inputText label = "Password" id ="password" value="#{registerBean.password}" required = "true"/></td>
+                    <td><h:message for="password" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="Stage First Name: "/></td>
+                    <td><h:inputText label = "Stage First Name" id ="stagefirstname" value="#{registerBean.stageFirstName}" required = "true"/></td>
+                    <td><h:message for="stagefirstname" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="Stage Last Name: "/></td>
+                    <td><h:inputText label = "Stage Last Name" id ="stagelastname" value="#{registerBean.stageLastName}" required = "true"/></td>
+                    <td><h:message for="stagelastname" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="Email Address: "/></td>
+                    <td><h:inputText label = "Email" id ="emailaddress" value="#{registerBean.email}" required = "true"/></td>
+                    <td><h:message for="emailaddress" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="Phone Number: "/></td>
+                    <td><h:inputText label = "Phone Number" id ="phonenumber" value="#{registerBean.phoneNum}" required = "true"/></td>
+                    <td><h:message for="phonenumber" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="City and State: "/></td>
+                    <td><h:inputText label = "Location" id ="location" value="#{registerBean.location}" required = "true"/></td>
+                    <td><h:message for="location" style="color:red" /></td>
+                </tr>
+            </table>
+            <table border="0">
+                <tr>
+                    <td><h:outputLabel value="Desired pay range: $"/></td>
+                    <td><h:inputText label = "Desired Pay" id ="desiredpay" onkeypress="if(event.which &lt; 48 || event.which &gt; 57) return false;" value="#{registerBean.desiredPay}" required = "true"/></td>
+                    <td><h:message for="desiredpay" style="color:red" /></td>
+                </tr>
+            </table>
+                <h:outputLabel value="Education: "/>
+                <h:inputText label = "Education" id ="education" value="#{registerBean.education}" />
+                <br />
+                <h:outputLabel value="Biography: "/> <h:message for="bio" style="color:red" /><br/>
+                <h:inputTextarea label = "bio" id ="bio" value="#{registerBean.bio}" required = "true" rows="4"/>
+                <br /><br/>
+                <h:outputLabel value="Allergies and Restrictions: "/>
+                <h:inputText label = "restrictions" id ="restrictions" value="#{registerBean.restrictions}"/>
+                <br />
+                
+                <table border="0">
+                    <tr>
+                        <td><h:outputLabel value="Age: "/></td>
+                        <td><h:inputText label = "age" id ="age" value="#{registerBean.age}" required = "true"/></td>
+                        <td><h:message for="age" style="color:red" /></td>
+                    </tr>
+                    <tr>
+                        <td><h:outputLabel value="Gender: "/></td>
+                        <td><h:inputText label = "gender" id ="gender" value="#{registerBean.gender}" required = "true"/></td>
+                        <td><h:message for="gender" style="color:red" /></td>
+                    </tr>
+                </table>
+                <h:outputLabel value="Are you an Auditory Performer: "/><h:message for="isauditory" style="color:red" />
+                <h:selectOneRadio label = "auditory" id ="isauditory" value="#{registerBean.isAuditory}" required = "true">
+                    <f:selectItem itemValue = "yes" itemLabel = "yes" /> 
+                    <f:selectItem itemValue = "no" itemLabel = "no" /> 
+                </h:selectOneRadio>
+                <br />
+                
+                <h:outputLabel value="Are you a Visual Performer: "/> <h:message for="isvisual" style="color:red" />
+                <h:selectOneRadio label = "visual" id ="isvisual" value="#{registerBean.isVisual}" required = "true"> 
+                    <f:selectItem itemValue = "yes" itemLabel = "yes" /> 
+                    <f:selectItem itemValue = "no" itemLabel = "no" /> 
+                </h:selectOneRadio>
+                <br />
+                <table border="0">
+                    <tr>
+                        <td><h:outputLabel value="Skin Color: "/></td>
+                        <td><h:inputText label = "skin color" id ="skincolor" value="#{registerBean.skinColor}" required = "true"/></td>
+                        <td><h:message for="skincolor" style="color:red" /></td>
+                    </tr>
+                    <tr>
+                        <td><h:outputLabel value="Hair Color: "/></td>
+                        <td><h:inputText label = "hair color" id ="hair" value="#{registerBean.hairColor}" required = "true"/></td>
+                        <td><h:message for="hair" style="color:red" /></td>
+                    </tr>
+                    <tr>
+                        <td><h:outputLabel value="Eye Color: "/></td>
+                        <td><h:inputText label = "eye color" id ="eye" value="#{registerBean.eyeColor}" required = "true"/></td>
+                        <td><h:message for="eye" style="color:red" /></td>
+                    </tr>
+                    <tr>
+                        <td><h:outputLabel value="Skin Tone: "/></td>
+                        <td><h:inputText label = "skin tone" id ="skintone" value="#{registerBean.skinTone}"/></td>
+                    </tr>
+                </table>
+                <h:outputLabel value="Body Type: "/>
+                <h:inputText label = "body type" id ="bodytype" value="#{registerBean.bodyType}"/>
+                <br />
+                <h:outputLabel value="Height: "/>
+                <h:selectOneMenu label = "height" id ="height" value="#{registerBean.height}">
+                    <f:selectItem itemValue = "2ft" itemLabel = "2ft" /> 
+                    <f:selectItem itemValue = "2ft 1in" itemLabel = "2ft 1in" /> 
+                    <f:selectItem itemValue = "2ft 2in" itemLabel = "2ft 2in" /> 
+                    <f:selectItem itemValue = "2ft 3in" itemLabel = "2ft 3in" /> 
+                    <f:selectItem itemValue = "2ft 4in" itemLabel = "2ft 4in" /> 
+                    <f:selectItem itemValue = "2ft 5in" itemLabel = "2ft 5in" /> 
+                    <f:selectItem itemValue = "2ft 6in" itemLabel = "2ft 6in" /> 
+                    <f:selectItem itemValue = "2ft 7in" itemLabel = "2ft 7in" /> 
+                    <f:selectItem itemValue = "2ft 8in" itemLabel = "2ft 8in" /> 
+                    <f:selectItem itemValue = "2ft 9in" itemLabel = "2ft 9in" /> 
+                    <f:selectItem itemValue = "2ft 10in" itemLabel = "2ft 10in" /> 
+                    <f:selectItem itemValue = "2ft 11in" itemLabel = "2ft 11in" /> 
+                    <f:selectItem itemValue = "3ft" itemLabel = "3ft" /> 
+                    <f:selectItem itemValue = "3ft 1in" itemLabel = "3ft 1in" /> 
+                    <f:selectItem itemValue = "3ft 2in" itemLabel = "3ft 2in" /> 
+                    <f:selectItem itemValue = "3ft 3in" itemLabel = "3ft 3in" /> 
+                    <f:selectItem itemValue = "3ft 4in" itemLabel = "3ft 4in" /> 
+                    <f:selectItem itemValue = "3ft 5in" itemLabel = "3ft 5in" /> 
+                    <f:selectItem itemValue = "3ft 6in" itemLabel = "3ft 6in" /> 
+                    <f:selectItem itemValue = "3ft 7in" itemLabel = "3ft 7in" /> 
+                    <f:selectItem itemValue = "3ft 8in" itemLabel = "3ft 8in" /> 
+                    <f:selectItem itemValue = "3ft 9in" itemLabel = "3ft 9in" /> 
+                    <f:selectItem itemValue = "3ft 10in" itemLabel = "3ft 10in" /> 
+                    <f:selectItem itemValue = "3ft 11in" itemLabel = "3ft 11in" /> 
+                    <f:selectItem itemValue = "4ft" itemLabel = "4ft" /> 
+                    <f:selectItem itemValue = "4ft 1in" itemLabel = "4ft 1in" /> 
+                    <f:selectItem itemValue = "4ft 2in" itemLabel = "4ft 2in" /> 
+                    <f:selectItem itemValue = "4ft 3in" itemLabel = "4ft 3in" />
+                    <f:selectItem itemValue = "4ft 4in" itemLabel = "4ft 4in" /> 
+                    <f:selectItem itemValue = "4ft 5in" itemLabel = "4ft 5in" />          
+                    <f:selectItem itemValue = "4ft 6in" itemLabel = "4ft 6in" /> 
+                    <f:selectItem itemValue = "4ft 7in" itemLabel = "4ft 7in" />
+                    <f:selectItem itemValue = "4ft 8in" itemLabel = "4ft 8in" /> 
+                    <f:selectItem itemValue = "4ft 9in" itemLabel = "4ft 9in" /> 
+                    <f:selectItem itemValue = "4ft 10in" itemLabel = "4ft 10in" /> 
+                    <f:selectItem itemValue = "4ft 11in" itemLabel = "4ft 11in" /> 
+                    <f:selectItem itemValue = "5ft" itemLabel = "5ft" /> 
+                    <f:selectItem itemValue = "5ft 1in" itemLabel = "5ft 1in" /> 
+                    <f:selectItem itemValue = "5ft 2in" itemLabel = "5ft 2in" /> 
+                    <f:selectItem itemValue = "5ft 3in" itemLabel = "5ft 3in" />
+                    <f:selectItem itemValue = "5ft 4in" itemLabel = "5ft 4in" /> 
+                    <f:selectItem itemValue = "5ft 5in" itemLabel = "5ft 5in" />          
+                    <f:selectItem itemValue = "5ft 6in" itemLabel = "5ft 6in" /> 
+                    <f:selectItem itemValue = "5ft 7in" itemLabel = "5ft 7in" />
+                    <f:selectItem itemValue = "5ft 8in" itemLabel = "5ft 8in" /> 
+                    <f:selectItem itemValue = "5ft 9in" itemLabel = "5ft 9in" /> 
+                    <f:selectItem itemValue = "5ft 10in" itemLabel = "5ft 10in" /> 
+                    <f:selectItem itemValue = "5ft 11in" itemLabel = "5ft 11in" /> 
+                    <f:selectItem itemValue = "6ft" itemLabel = "6ft" /> 
+                    <f:selectItem itemValue = "6ft 1in" itemLabel = "6ft 1in" /> 
+                    <f:selectItem itemValue = "6ft 2in" itemLabel = "6ft 2in" /> 
+                    <f:selectItem itemValue = "6ft 3in" itemLabel = "6ft 3in" />
+                    <f:selectItem itemValue = "6ft 4in" itemLabel = "6ft 4in" /> 
+                    <f:selectItem itemValue = "6ft 5in" itemLabel = "6ft 5in" />          
+                    <f:selectItem itemValue = "6ft 6in" itemLabel = "6ft 6in" /> 
+                    <f:selectItem itemValue = "6ft 7in" itemLabel = "6ft 7in" />
+                    <f:selectItem itemValue = "6ft 8in" itemLabel = "6ft 8in" /> 
+                    <f:selectItem itemValue = "6ft 9in" itemLabel = "6ft 9in" /> 
+                    <f:selectItem itemValue = "6ft 10in" itemLabel = "6ft 10in" /> 
+                    <f:selectItem itemValue = "6ft 11in" itemLabel = "6ft 11in" /> 
+                    <f:selectItem itemValue = "7ft" itemLabel = "7ft" /> 
+                    <f:selectItem itemValue = "7ft 1in" itemLabel = "7ft 1in" /> 
+                    <f:selectItem itemValue = "7ft 2in" itemLabel = "7ft 2in" /> 
+                    <f:selectItem itemValue = "7ft 3in" itemLabel = "7ft 3in" />
+                    <f:selectItem itemValue = "7ft 4in" itemLabel = "7ft 4in" /> 
+                    <f:selectItem itemValue = "7ft 5in" itemLabel = "7ft 5in" />          
+                    <f:selectItem itemValue = "7ft 6in" itemLabel = "7ft 6in" /> 
+                    <f:selectItem itemValue = "7ft 7in" itemLabel = "7ft 7in" />
+                    <f:selectItem itemValue = "7ft 8in" itemLabel = "7ft 8in" /> 
+                    <f:selectItem itemValue = "7ft 9in" itemLabel = "7ft 9in" /> 
+                    <f:selectItem itemValue = "7ft 10in" itemLabel = "7ft 10in" /> 
+                    <f:selectItem itemValue = "7ft 11in" itemLabel = "7ft 11in" /> 
+                    <f:selectItem itemValue = "8ft" itemLabel = "8ft" />
+                </h:selectOneMenu>
+                <br />
+                <h:outputLabel value="Weight: "/>
+                <h:inputText label = "weight" id ="weight" value="#{registerBean.weight}"/>
+                <br />
+                <h:outputLabel value="Voice Part: "/>
+                <h:inputText label = "voice part" id ="voicepart" value="#{registerBean.voicePart}"/>
+                <br />
+                <h:outputLabel value="Instrument(s) played: "/>
+                <h:inputText label = "instrument" id ="instrument" value="#{registerBean.instrument}"/>
+                <br/>
+                <h:commandButton value="Register"/>
+                <h:outputText value="#{registerBean.getResponse()}"/>
+                <br/>
+                
+            </h:form>
+    </div>
+        </article>
+    </section>
+    <br />
+    <hr />
+    <p>
+      Design uses <a href="http://concisecss.com/">Concise CSS Framework</a>
+    </p>
+    <p>
+      Designed by Team Orange
+    </p>
+    </body>
+</html>

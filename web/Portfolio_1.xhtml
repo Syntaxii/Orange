@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="FinalStyle.css" />
+    </head>
+    <body>
+        <div>
+      <h1 class="logo">
+        Welcome to Talented!
+      </h1>
+      <div class="tab">
+        <form method="get" action="defaultHub.xhtml">
+          <button class="submit">Hub</button>
+        </form>
+        <form method="get" action="Portfolio.xhtml">
+          <button class="submit">Portfolio</button>
+        </form>
+        <form method="get" action="JobBoard.xhtml">
+          <button class="submit">Job Board</button>
+        </form>
+          <form method="get" action="Search.xhtml">
+          <button class="submit">Find an artists</button>
+        </form>
+        <form method="get" action="LogOut.php">
+          <button class="submit">Log Out</button>
+        </form>
+      </div>
+    </div>
+    <hr />
+    <br />
+    <section>
+        <article>
+    <div> 
+      <p>
+          <h:form>
+        <img style="padding: 0 5px; left" src="img-placeholder.jpg"
+        width="145" height="160" alt="holder" usemap="#map" align="left" /> 
+        User Name:
+        <h:outputText value="#{testPortfolio.getFirstName()}"/> <h:outputText value="#{testPortfolio.getLastName()}"/> <br/> 
+        contact info: <br />
+        Email:
+        <h:outputText value="#{testPortfolio.getEmailAdress()}"/> <br /> 
+        Home#:
+        <h:outputText value="#{testPortfolio.getHomePhone()}"/> <br />
+        work#:
+        <h:outputText value="#{testPortfolio.getWorkPhone()}"/> <br />
+        Address: 
+        <h:outputText value="#{testPortfolio.getAdress()}"/> <br />
+        City: 
+        <h:outputText value="#{testPortfolio.getCityName()}"/><br />
+        State:
+        <h:outputText value="#{testPortfolio.getState()}"/>
+        <div>
+      <p style="margin-top: 20px">
+        personal bio: <br /> 
+        <h:outputText value="#{testPortfolio.getPersonalBio()}"/>
+      </p>
+    </div>
+    
+    <div>
+      open hours: <br /> open days:
+    </div>
+     </h:form>
+      </p>
+    </div>
+    </article>
+    </section>
+    <div>
+    </div>
+    <br />
+    <hr />
+    <p>
+      Design uses <a href="http://concisecss.com/">Concise CSS Framework</a>
+    </p>
+    <p>
+      Designed by Team Orange
+    </p>
+    </body>
+</html>

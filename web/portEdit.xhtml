@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Portfolio Update</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="FinalStyle.css" />
+    </head>
+    <body>
+        <div>
+      <h1 class="logo">
+        Welcome to Talented!
+      </h1>
+      <div class="tab">
+        <form method="get" action="defaultHub.xhtml">
+          <button class="submit">Hub</button>
+        </form>
+        <form method="get" action="Portfolio.xhtml">
+          <button class="submit">Portfolio</button>
+        </form>
+        <form method="get" action="JobBoard.xhtml">
+          <button class="submit">Job Board</button>
+        </form>
+        <form method="get" action="JobsInput.xhtml">
+          <button class="submit">Post a Job</button>
+        </form>
+        <form method="get" action="landingpage.xhtml">
+          <button class="submit">Log Out</button>
+        </form>
+      </div>
+    </div>
+    <hr />
+    <br />
+    <section>
+        <article>
+    <div> 
+      <p>
+          <h:form>
+              
+        <img style="padding: 0 5px; left" src="img-placeholder.jpg"
+        width="145" height="160" alt="holder" usemap="#map" align="left" /> 
+        First Name: 
+        <h:inputText id="inputFirstName" value="#{testPortfolio.firstName}">
+        </h:inputText>
+        <br/>
+        Last Name: <h:inputText id="inputLastName" value="#{testPortfolio.lastName}">
+        </h:inputText> <br/>
+        Email:
+        <h:inputText id="inputEmailAdress" value="#{testPortfolio.emailAdress}">
+        </h:inputText> <br /> 
+        Home#:
+        <h:inputText id="inputHomePhone" value="#{testPortfolio.homePhone}">
+        </h:inputText> <br />
+        work#:
+        <h:inputText id="inputWorkPhone" value="#{testPortfolio.workPhone}">
+        </h:inputText> <br /><br />
+        Address: <h:inputText id="inputAdress" value="#{testPortfolio.adress}">
+        </h:inputText><br />
+        City: <h:inputText id="inputCityName" value="#{testPortfolio.cityName}">
+        </h:inputText><br />
+        State:<h:inputText id="inputState" value="#{testPortfolio.state}">
+        </h:inputText>
+        <div>
+      <p style="margin-top: 20px">
+          personal bio: <h:inputTextarea id="inputPersonalBio" value="#{testPortfolio.personalBio}">
+        </h:inputTextarea>
+        <br /> 
+      </p>
+    </div>
+    <div>
+      open hours:
+      <br /> 
+      open days:
+    </div>
+        <h:commandButton
+            value="update"
+            type="submit"
+            />
+     </h:form>   
+      </p>
+    </div>
+     
+    </article>
+    </section>
+    <div>
+    </div>
+    <br />
+    <hr />
+    <p>
+      Design uses <a href="http://concisecss.com/">Concise CSS Framework</a>
+    </p>
+    <p>
+      Designed by Team Orange
+    </p>
+    </body>
+</html>

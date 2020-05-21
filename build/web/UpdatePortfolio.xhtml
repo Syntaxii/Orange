@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="FinalStyle.css" />
+    </h:head>
+    <body>
+        <div>
+      <h1 class="logo">
+        Welcome to Talented!
+      </h1>
+      <div class="tab">
+        <form method="get" action="defaultHub.xhtml">
+          <button class="submit">Hub</button>
+        </form>
+        <form method="get" action="Portfolio.xhtml">
+          <button class="submit">Portfolio</button>
+        </form>
+        <form method="get" action="JobBoard.xhtml">
+          <button class="submit">Job Board</button>
+        </form>
+          <form method="get" action="JobsInput.xhtml">
+          <button class="submit">Post a Job</button>
+        </form>
+        <form method="get" action="landingpage.xhtml">
+          <button class="submit">Log Out</button>
+        </form>
+      </div>
+    </div>
+    <hr />
+    <br />
+    
+    <section>
+        <article>
+    <div> 
+      <p>
+          
+    <h:body>
+        <h:form>
+                <h:outputLabel value="UID: "/>
+                <h:outputText  id="UserID" value="#{logInBean.UID}"/>
+                <table border="0">
+                    <tr>
+                        <td><h:outputLabel value="Name: "/></td>
+                        <td><h:outputText  id="legalfirstname" value="#{logInBean.legalFName}"/></td>
+                        <td><h:outputText  id="legallastname" value="#{logInBean.legalLName}"/></td>
+                    </tr>
+                    <tr>
+                        
+                        <td><h:inputText id="newlegalfirstname" value="#{logInBean.newlegalFname}"/></td>
+                        <td><h:commandButton value="Change Legal First Name" action="#{logInBean.changelegalF()}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h:inputText id="newlegallastname" value="#{logInBean.newLegalLName}"/></td>
+                        <td><h:commandButton value="Change Legal Last Name" action="#{logInBean.changelegalL()}"/></td>
+                    </tr>
+                    <tr class="blank_row">
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td><h:outputLabel value="Stage Name: "/></td>
+                        <td><h:outputText  id="stagefirstname" value="#{logInBean.stageFirstName}"/></td>
+                        <td><h:outputText  id="stagelastname" value="#{logInBean.stageLastName}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h:inputText id="newstagefirstname" value="#{logInBean.newStageFirstName}"/></td>
+                        <td><h:commandButton value="Change Stage First Name" action="#{logInBean.changeStageF()}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h:inputText id="newstagelastname" value="#{logInBean.newStageLastName}"/></td>
+                        <td><h:commandButton value="Change Stage Last Name" action="#{logInBean.changeStageL()}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h:outputLabel value="Email: "/></td>
+                        <td><h:outputText  id="email" value="#{logInBean.email}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h:inputText id="newemail" value="#{logInBean.newEmail}"/></td>
+                        <td><h:commandButton value="Change Email" action="#{logInBean.changeEmail()}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h:outputLabel value="Phone Number: "/></td>
+                        <td><h:outputText  id="phonenumber" value="#{logInBean.phoneNum}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h:inputText id="newphonenumber" value="#{logInBean.newPhoneNum}"/></td>
+                        <td><h:commandButton value="Change Phone Number" action="#{logInBean.changePhoneNum()}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h:outputLabel value="Adress: "/></td>
+                        <td><h:outputText  id="location" value="#{logInBean.location}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h:inputText id="newlocation" value="#{logInBean.newLocation}"/></td>
+                        <td><h:commandButton value="Change Location" action="#{logInBean.changeLocation()}"/></td>
+                    </tr>
+                </table>
+                <h:outputLabel value="Schedule: "/>
+       <br/>
+       <h:outputLabel value="Day Free: "/>
+       <h:outputText  id="dayFree" value="#{logInBean.dayFree}"/>
+       <h:inputText id="newDayFree" value="#{logInBean.newDayFree}"/>
+       <h:commandButton value="Change day free:" action="#{logInBean.changeDayFree()}"/>
+       <br/>
+       <h:outputLabel value="Hour Free: "/>
+       <h:outputText  id="hourFree" value="#{logInBean.hourFree}"/>
+       <h:inputText id="newHourFree" value="#{logInBean.newHourFree}"/>
+       <h:commandButton value="Change hour free:" action="#{logInBean.changeHourFree()}"/>
+       <br/>
+                
+       <h:outputLabel value="Biography: "/>
+       <h:outputText  id="bio" value="#{logInBean.bio}"/><br>
+           <h:inputTextarea id="newbio" value="#{logInBean.newBio}" rows="4"/></br>
+       <h:commandButton value="Change Biography" action="#{logInBean.changeBio()}"/>
+              
+       
+       
+       
+        <h:commandButton value="Done with updates" action="#{logInBean.goToPortfolio()}"/>
+        
+         <h:outputText  id="string2" value="#{logInBean.string2}"/>
+       </h:form>
+    </h:body>
+    
+    </p>
+    </div>
+    </article>
+    </section>
+    
+    <div>
+    </div>
+    <br />
+    <hr />
+    <p>
+      Design uses <a href="http://concisecss.com/">Concise CSS Framework</a>
+    </p>
+    <p>
+      Designed by Team Orange
+    </p>
+    </body>
+</html>

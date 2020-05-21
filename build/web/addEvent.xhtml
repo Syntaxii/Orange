@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Add Event</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="FinalStyle.css" />
+    </head>
+    <body>
+        <div>
+      <h1 class="logo">
+        Welcome to Talented!
+      </h1>
+      <div class="tab">
+        <form method="get" action="defaultHub.xhtml">
+          <button class="submit">Hub</button>
+        </form>
+        <form method="get" action="Portfolio.xhtml">
+          <button class="submit">Portfolio</button>
+        </form>
+        <form method="get" action="JobBoard.xhtml">
+          <button class="submit">Job Board</button>
+        </form>
+          <form method="get" action="JobsInput.xhtml">
+          <button class="submit">Post a Job</button>
+        </form>
+        <form method="get" action="landingpage.xhtml">
+          <button class="submit">Log Out</button>
+        </form>
+      </div>
+    </div>
+    <hr />
+    <br />
+    
+    <section>
+        <article>
+    <div> 
+      <p>
+    <h:body>
+        <h:form>
+            <table border="0">
+                <tr>
+                    <td><h:outputLabel value="Location: "/></td>
+                    <td><h:inputText id ="location" value ="#{addEventBean.location}" required = "true" /></td>
+                    <td><h:message for="location" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="Title: "/></td>
+                    <td><h:inputText id ="title" value ="#{addEventBean.title}" required = "true"/></td>
+                    <td><h:message for="title" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="Role: "/></td>
+                    <td><h:inputText id ="role" value ="#{addEventBean.role}" required = "true"/></td>
+                    <td><h:message for="role" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="Started Date(YYYY-MM-DD):"/></td>
+                    <td><h:inputText id ="startDate" value ="#{addEventBean.startDate}" required = "true"/></td>
+                    <td><h:message for="startDate" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputLabel value="Ended Date(YYYY-MM-DD):"/></td>
+                    <td><h:inputText id ="endDate" value ="#{addEventBean.endDate}" required = "true"/></td>
+                    <td><h:message for="endDate" style="color:red" /></td>
+                </tr>
+            </table>
+            <h:commandButton value="Make Event" action="#{addEventBean.addEvent()}"/>
+             <h:outputText  id="string2" value="#{addEventBean.string2}"/>
+        </h:form>
+    </h:body>
+          </p>
+    </div>
+    </article>
+    </section>
+    
+    
+    <div>
+    </div>
+    <br />
+    <hr />
+    <p>
+      Design uses <a href="http://concisecss.com/">Concise CSS Framework</a>
+    </p>
+    <p>
+      Designed by Team Orange
+    </p>
+    </body>
+</html>
